@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Flappy</title>
+    </head>
+
+    <body class="m-0 bg-black">
+        <div
+            class="grid items-center justify-center"
+            style="width: 100%; height: 100vh"
+        >
+            <div class="relative">
+                <canvas id="game-canvas" width="144" height="256"></canvas>
+                <div
+                    class="absolute top-0 hidden h-full w-full items-center justify-center"
+                >
+                    <h1
+                        class="text-center text-5xl font-extrabold text-white"
+                        style="
+                            text-shadow: 0px 4px 4px
+                                rgb(234 88 12 / var(--tw-bg-opacity));
+                        "
+                    >
+                        Flappy
+                    </h1>
+                    <button
+                        class="h-min w-20 justify-self-center rounded-md bg-orange-500 p-2 font-bold text-white transition-all hover:bg-orange-600 hover:shadow-md"
+                    >
+                        Play
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
