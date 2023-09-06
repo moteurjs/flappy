@@ -1,5 +1,5 @@
-import Animation from ".";
-import { Vector2 } from "../math/vector";
+import { Animation } from ".";
+import { Vector2 } from "moteur/math/vector";
 
 export interface TextureScrollProps {
     xRange: [number, number];

@@ -1,4 +1,4 @@
-import Animation from ".";
+import { Animation } from ".";
 
 export interface WaveAnimationProps {
     amplitude: number;

@@ -1,10 +1,10 @@
-import System from "../ecs/system";
-import Sprite from "../gfx/sprite";
-import Transform from "../math/transform";
-import { FrameAnimation, TextureScroll } from "./texture";
-import { WaveAnimation } from "./transform";
+import { FrameAnimation, TextureScroll } from "../components/animations/texture";
+import { WaveAnimation } from "../components/animations/transform";
+import { System } from "moteur/ecs";
+import { Sprite } from "moteur/gfx";
+import { Transform } from "moteur/math";
 
-export default class Animator extends System {
+export class Animator extends System {
     public async update(timestamp: number) {
         this.entities
             .query(Sprite, TextureScroll)

@@ -1,36 +1,41 @@
-<!doctype html>
-<html lang="en">
+<html>
     <head>
         <title>Flappy</title>
-    </head>
+        <style>
+            body {
+                margin: 0;
+                background-color: black;
+            }
 
-    <body class="m-0 bg-black">
-        <div
-            class="grid items-center justify-center"
-            style="width: 100%; height: 100vh"
-        >
-            <div class="relative">
-                <canvas id="game-canvas" width="144" height="256"></canvas>
-                <div
-                    class="absolute top-0 hidden h-full w-full items-center justify-center"
-                >
-                    <h1
-                        class="text-center text-5xl font-extrabold text-white"
-                        style="
-                            text-shadow: 0px 4px 4px
-                                rgb(234 88 12 / var(--tw-bg-opacity));
-                        "
-                    >
-                        Flappy
-                    </h1>
-                    <button
-                        class="h-min w-20 justify-self-center rounded-md bg-orange-500 p-2 font-bold text-white transition-all hover:bg-orange-600 hover:shadow-md"
-                    >
-                        Play
-                    </button>
-                </div>
+            .window-container {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .game-container {
+                position: relative;
+                user-select: none;
+            }
+
+            .game-ui {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="window-container">
+            <div class="game-container">
+                <canvas id="game-canvas" width="288" height="512"></canvas>
+                <div class="game-ui" id="game-ui"></div>
             </div>
         </div>
-        <script type="module" src="/src/main.ts"></script>
+        <script type="module" src="src/index.ts"></script>
     </body>
 </html>
